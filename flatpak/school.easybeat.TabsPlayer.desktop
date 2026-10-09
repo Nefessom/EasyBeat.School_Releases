@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=EasyBeat.School
+Comment=Tabs player, metronome, theory and notes
+Exec=easybeat-school %U
+Icon=school.easybeat.TabsPlayer
+Terminal=false
+Categories=AudioVideo;Audio;Music;Education;
+StartupWMClass=EasyBeat.School
+MimeType=x-scheme-handler/easybeat-school;

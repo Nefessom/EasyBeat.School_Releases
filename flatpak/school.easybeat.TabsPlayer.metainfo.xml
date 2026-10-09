@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>school.easybeat.TabsPlayer</id>
+  <name>EasyBeat.School</name>
+  <summary>Tabs player, metronome, music theory and notes</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <developer_name>EasyBeat.School</developer_name>
+  <url type="homepage">https://easybeat.school</url>
+  <description>
+    <p>EasyBeat.School is a Guitar Pro tabs player with a metronome, music theory lessons and notes for music students.</p>
+  </description>
+  <launchable type="desktop-id">school.easybeat.TabsPlayer.desktop</launchable>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.7.1" date="2026-10-08"/>
+  </releases>
+</component>
