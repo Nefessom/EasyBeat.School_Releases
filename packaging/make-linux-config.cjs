@@ -17,7 +17,18 @@ b.linux = {
   icon: path.join(__dirname, '..', 'flatpak', 'icons'),
   executableArgs: ['--no-sandbox'],
   artifactName: 'EasyBeat.School-${version}-x86_64.${ext}',
+  // Embedded .desktop (Gear Lever and other AppImage installers copy it): name, window match,
+  // and the Google sign-in return link.
+  desktop: {
+    Name: 'EasyBeat.School',
+    StartupWMClass: 'EasyBeat.School',
+    MimeType: 'x-scheme-handler/easybeat-school;',
+    Categories: 'AudioVideo;Audio;Music;Education;',
+  },
 };
+// Wayland app_id comes from desktopName (Electron sets CHROME_DESKTOP from it): the panel then
+// shows EasyBeat.School instead of the executable name.
+b.extraMetadata = { ...(b.extraMetadata || {}), desktopName: 'EasyBeat.School.desktop' };
 delete b.linux.fileAssociations;
 b.files = [
   ...b.files,
