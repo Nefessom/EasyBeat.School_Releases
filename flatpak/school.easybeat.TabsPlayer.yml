@@ -29,7 +29,7 @@ modules:
         path: ../../EasyBeat.School-0.7.1/release/linux/linux-unpacked
         dest: app
       - type: dir
-        path: ../../EasyBeat.School-0.7.1/electron/icons/linux
+        path: icons
         dest: icons
       - type: file
         path: easybeat-school.sh
