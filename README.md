@@ -24,7 +24,7 @@ Builds are currently intended mainly for testing.
 **Flatpak:**
 ```bash
 flatpak install --user EasyBeat.School-0.7.1-x86_64.flatpak
-flatpak run school.easybeat.TabsPlayer
+flatpak run school.easybeat.App
 ```
 
 **AppImage:**

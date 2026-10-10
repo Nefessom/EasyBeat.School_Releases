@@ -1,4 +1,4 @@
-app-id: school.easybeat.TabsPlayer
+app-id: school.easybeat.App
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
@@ -22,10 +22,10 @@ modules:
     build-commands:
       - cp -r app /app/easybeat
       - install -Dm755 easybeat-school.sh /app/bin/easybeat-school
-      - install -Dm644 school.easybeat.TabsPlayer.desktop /app/share/applications/school.easybeat.TabsPlayer.desktop
-      - install -Dm644 school.easybeat.TabsPlayer.mime.xml /app/share/mime/packages/school.easybeat.TabsPlayer.xml
-      - install -Dm644 school.easybeat.TabsPlayer.metainfo.xml /app/share/metainfo/school.easybeat.TabsPlayer.metainfo.xml
-      - for s in 64 128 256 512; do install -Dm644 icons/${s}x${s}.png /app/share/icons/hicolor/${s}x${s}/apps/school.easybeat.TabsPlayer.png; done
+      - install -Dm644 school.easybeat.App.desktop /app/share/applications/school.easybeat.App.desktop
+      - install -Dm644 school.easybeat.App.mime.xml /app/share/mime/packages/school.easybeat.App.xml
+      - install -Dm644 school.easybeat.App.metainfo.xml /app/share/metainfo/school.easybeat.App.metainfo.xml
+      - for s in 64 128 256 512; do install -Dm644 icons/${s}x${s}.png /app/share/icons/hicolor/${s}x${s}/apps/school.easybeat.App.png; done
     sources:
       # electron-builder "linux-unpacked" of the release, packed as tar.gz (see packaging/)
       - type: archive
@@ -38,8 +38,8 @@ modules:
       - type: file
         path: easybeat-school.sh
       - type: file
-        path: school.easybeat.TabsPlayer.desktop
+        path: school.easybeat.App.desktop
       - type: file
-        path: school.easybeat.TabsPlayer.metainfo.xml
+        path: school.easybeat.App.metainfo.xml
       - type: file
-        path: school.easybeat.TabsPlayer.mime.xml
+        path: school.easybeat.App.mime.xml

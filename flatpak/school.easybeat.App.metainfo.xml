@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>school.easybeat.TabsPlayer</id>
+  <id>school.easybeat.App</id>
   <name>EasyBeat.School</name>
   <summary>Tabs player, metronome, tuner and lesson notes</summary>
   <metadata_license>CC0-1.0</metadata_license>
@@ -20,7 +20,7 @@
       <li>Music theory lessons</li>
     </ul>
   </description>
-  <launchable type="desktop-id">school.easybeat.TabsPlayer.desktop</launchable>
+  <launchable type="desktop-id">school.easybeat.App.desktop</launchable>
   <screenshots>
     <screenshot type="default">
       <caption>Metronome, dark theme</caption>
