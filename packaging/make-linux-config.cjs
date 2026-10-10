@@ -22,7 +22,7 @@ b.linux = {
   desktop: {
     Name: 'EasyBeat.School',
     StartupWMClass: 'EasyBeat.School',
-    MimeType: 'x-scheme-handler/easybeat-school;',
+    MimeType: 'x-scheme-handler/easybeat-school;application/x-guitar-pro;application/x-easybeat-score;application/x-capella;application/vnd.recordare.musicxml+xml;',
     Categories: 'AudioVideo;Audio;Music;Education;',
   },
 };

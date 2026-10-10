@@ -12,6 +12,8 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --device=dri
+  # Library: ~/Downloads/Tabs Player (getDefaultTabsStoragePath in electron/main.cjs)
+  - --filesystem=xdg-download
   - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.freedesktop.Notifications
 modules:
@@ -21,6 +23,7 @@ modules:
       - cp -r app /app/easybeat
       - install -Dm755 easybeat-school.sh /app/bin/easybeat-school
       - install -Dm644 school.easybeat.TabsPlayer.desktop /app/share/applications/school.easybeat.TabsPlayer.desktop
+      - install -Dm644 school.easybeat.TabsPlayer.mime.xml /app/share/mime/packages/school.easybeat.TabsPlayer.xml
       - install -Dm644 school.easybeat.TabsPlayer.metainfo.xml /app/share/metainfo/school.easybeat.TabsPlayer.metainfo.xml
       - for s in 64 128 256 512; do install -Dm644 icons/${s}x${s}.png /app/share/icons/hicolor/${s}x${s}/apps/school.easybeat.TabsPlayer.png; done
     sources:
@@ -37,3 +40,5 @@ modules:
         path: school.easybeat.TabsPlayer.desktop
       - type: file
         path: school.easybeat.TabsPlayer.metainfo.xml
+      - type: file
+        path: school.easybeat.TabsPlayer.mime.xml
