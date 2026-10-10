@@ -44,5 +44,5 @@ https://easybeat.school
 
 ## Лицензия / License
 
-Программа распространяется бесплатно на условиях файла [LICENSE](LICENSE). Все права защищены.
-The software is provided free of charge under the terms in [LICENSE](LICENSE). All rights reserved.
+Программа бесплатная. Пользоваться и распространять её можно кому угодно и где угодно, в неизменном виде; изменять программу нельзя. Подробно — в [LICENSE](LICENSE).
+The software is free. Anyone may use and redistribute it anywhere, unmodified; modifying it is not allowed. See [LICENSE](LICENSE).

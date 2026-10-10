@@ -1,17 +1,27 @@
-EasyBeat.School — End User License
+EasyBeat.School — Freeware License
 
 Copyright (c) EasyBeat.School. All rights reserved.
 
-The compiled application published in this repository's Releases ("the Software")
-is provided free of charge for personal, non-commercial use, including testing.
+The compiled application published in this repository's Releases
+("the Software") is free of charge.
 
-You may install and run the Software and make unmodified copies of the
-installers for personal use. You may not modify, decompile, reverse engineer,
-resell or redistribute the Software, in whole or in part, without written
-permission from the copyright holder, except where applicable law allows it.
+1. Use. Anyone may install and use the Software for any purpose, without
+   limitation and without paying anything.
 
-The Software is provided "as is", without warranty of any kind. The authors
-are not liable for any damages arising from its use.
+2. Redistribution. Anyone may copy and redistribute the Software, in any
+   medium and through any channel — including app stores and package
+   repositories such as Flathub — provided that the Software is distributed
+   unmodified, as published by EasyBeat.School, and that this license is kept
+   with it.
 
-Third-party components (including the bundled sound font) remain under their
-own licenses, which are listed in THIRD_PARTY_LICENSES.md.
+3. No modification. You may not modify, adapt, translate, decompile,
+   disassemble or reverse engineer the Software, or create derivative works
+   based on it, except where applicable law expressly allows it. Packaging the
+   unmodified Software into an installation format (for example a Flatpak,
+   AppImage or system package) is not a modification.
+
+4. No warranty. The Software is provided "as is", without warranty of any
+   kind. The authors are not liable for any damages arising from its use.
+
+Third-party components bundled with the Software (including the sound font)
+remain under their own licenses, listed in THIRD_PARTY_LICENSES.md.
