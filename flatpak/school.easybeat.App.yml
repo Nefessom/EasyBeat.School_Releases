@@ -29,8 +29,8 @@ modules:
     sources:
       # electron-builder "linux-unpacked" of the release, packed as tar.gz (see packaging/)
       - type: archive
-        url: https://github.com/Nefessom/EasyBeat.School_Releases/releases/download/v0.7.1/EasyBeat.School-0.7.1-linux-x64.tar.gz
-        sha256: ab0f440643cf38da289f5b3f3817bc7e98a8a07e9830117eea10846b013af61b
+        url: https://github.com/Nefessom/EasyBeat.School_Releases/releases/download/v0.8.1/EasyBeat.School-0.8.1-linux-x64.tar.gz
+        sha256: 74f4f25f0165659972aba9c2922768937ab334f96be7cd4c5ad606a7cc6fdcfc
         dest: app
       - type: dir
         path: icons

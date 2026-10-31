@@ -11,7 +11,7 @@ Download page for **EasyBeat.School** builds. Source code is closed for now.
 
 | Платформа / Platform | Файл / File | Статус / Status |
 |---|---|---|
-| Linux (x86_64) | `.AppImage`, `.flatpak` | тестовая 0.7.1 / test build 0.7.1 |
+| Linux (x86_64) | `.AppImage`, `.flatpak` | стабильная 0.8.1 / stable 0.8.1 |
 | Windows | `.exe` | позже / later |
 | macOS | `.dmg` | позже / later |
 | Android | `.apk` | позже / later |
@@ -23,14 +23,14 @@ Builds are currently intended mainly for testing.
 
 **Flatpak:**
 ```bash
-flatpak install --user EasyBeat.School-0.7.1-x86_64.flatpak
+flatpak install --user EasyBeat.School-0.8.1-x86_64.flatpak
 flatpak run school.easybeat.App
 ```
 
 **AppImage:**
 ```bash
-chmod +x EasyBeat.School-0.7.1-x86_64.AppImage
-./EasyBeat.School-0.7.1-x86_64.AppImage
+chmod +x EasyBeat.School-0.8.1-x86_64.AppImage
+./EasyBeat.School-0.8.1-x86_64.AppImage
 ```
 
 Контрольные суммы — в `SHA256SUMS.txt`. Файлы упаковки Flatpak — в папке [flatpak](flatpak).
