@@ -83,6 +83,11 @@
   </supports>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="0.8.4" date="2026-11-11">
+      <description>
+        <p>Stable release 0.8.4, for x86_64 and ARM (aarch64). Metronome tap tempo; accents clear of triplet brackets; the bars of the mixer scroll by touch; a steadier sheet zoom; the program starts on Ubuntu 24.04 and newer.</p>
+      </description>
+    </release>
     <release version="0.8.3" date="2026-11-03">
       <description>
         <p>Stable release 0.8.3. Starts from an unpacked archive without chrome-sandbox permissions; score files open in EasyBeat.School.</p>
