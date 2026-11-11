@@ -16,6 +16,9 @@ const LINUX_NAME = ARCH === 'x64' ? 'x86_64' : 'arm64';
 const b = require(path.resolve('package.json')).build;
 delete b.fileAssociations;
 b.directories = { output: 'release/linux' };
+// The static AppImage runtime (electron-builder 26+): needs no libfuse2 (Ubuntu 22.04+ ship only FUSE 3) and no libz.so
+// (the old arm64 runtime would not start without zlib1g-dev). Linux is packed with electron-builder 26 (docs/desktop-release.md).
+b.toolsets = { appimage: '1.0.3' };
 b.linux = {
   ...b.linux,
   target: ['AppImage'],
@@ -26,11 +29,14 @@ b.linux = {
   artifactName: `EasyBeat.School-${'${version}'}-${LINUX_NAME}.${'${ext}'}`,
   // Embedded .desktop (Gear Lever and other AppImage installers copy it): name, window match,
   // and the Google sign-in return link.
+  // electron-builder 26: the .desktop keys go under `entry`.
   desktop: {
-    Name: 'EasyBeat.School',
-    StartupWMClass: 'EasyBeat.School',
-    MimeType: 'x-scheme-handler/easybeat-school;application/x-guitar-pro;application/x-easybeat-score;application/x-capella;application/vnd.recordare.musicxml+xml;',
-    Categories: 'AudioVideo;Audio;Music;Education;',
+    entry: {
+      Name: 'EasyBeat.School',
+      StartupWMClass: 'EasyBeat.School',
+      MimeType: 'x-scheme-handler/easybeat-school;application/x-guitar-pro;application/x-easybeat-score;application/x-capella;application/vnd.recordare.musicxml+xml;',
+      Categories: 'AudioVideo;Audio;Music;Education;',
+    },
   },
 };
 // Wayland app_id comes from desktopName (Electron sets CHROME_DESKTOP from it): the panel then
@@ -44,5 +50,9 @@ b.files = [
   `!node_modules/onnxruntime-node/bin/napi-v3/linux/${ARCH}/libonnxruntime_providers_{cuda,tensorrt}.so`,
   `!node_modules/@napi-rs/canvas-linux-${ARCH}-musl/**`,
   `!node_modules/@napi-rs/canvas-linux-${OTHER}-*/**`,
+  // sharp (from @huggingface/transformers): only this processor's glibc build; musl, wasm and the other one stay out.
+  `!node_modules/@img/sharp-{,libvips-}linux-${OTHER}/**`,
+  '!node_modules/@img/sharp-{,libvips-}linuxmusl-*/**',
+  '!node_modules/@img/sharp-wasm32/**',
 ];
 process.stdout.write(JSON.stringify(b, null, 2));
