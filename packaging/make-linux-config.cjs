@@ -26,7 +26,9 @@ b.linux = {
   // Linux icon: the logo without the faint outer glow, enlarged to fill the square (the stock one looked small in the panel).
   icon: path.join(__dirname, '..', 'flatpak', 'icons'),
   executableArgs: ['--no-sandbox'],
-  artifactName: `EasyBeat.School-${'${version}'}-${LINUX_NAME}.${'${ext}'}`,
+  // "-linux-" in every Linux file name, like "-mac-" / "-win" / "-android" (owner, 11.11.2026; from 0.8.5): the AppImage and
+  // the Flatpak must say which system they are for. 0.8.4 and older were EasyBeat.School-X-x86_64.AppImage.
+  artifactName: `EasyBeat.School-${'${version}'}-linux-${LINUX_NAME}.${'${ext}'}`,
   // Embedded .desktop (Gear Lever and other AppImage installers copy it): name, window match,
   // and the Google sign-in return link.
   // electron-builder 26: the .desktop keys go under `entry`.
