@@ -8,7 +8,9 @@ command: easybeat-school
 separate-locales: false
 finish-args:
   - --share=ipc
-  - --socket=x11
+  # Wayland first (touchpad pinch zoom works only there), X11 only on desktops without Wayland.
+  - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
   - --share=network
   - --device=dri
