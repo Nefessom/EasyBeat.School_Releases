@@ -7,34 +7,48 @@ Download page for **EasyBeat.School** builds. Source code is closed for now.
 
 ## Скачать / Download
 
-Все сборки — на странице [Releases](../../releases).
+Все сборки — на странице [Releases](../../releases); самая новая — [Latest](../../releases/latest).
+All builds are on the [Releases](../../releases) page; the newest is [Latest](../../releases/latest).
 
-| Платформа / Platform | Файл / File | Статус / Status |
-|---|---|---|
-| Linux (x86_64) | `.AppImage`, `.flatpak` | стабильная 0.8.1 / stable 0.8.1 |
-| Windows | `.exe` | позже / later |
-| macOS | `.dmg` | позже / later |
-| Android | `.apk` | позже / later |
+В имени каждого файла есть версия (`X`) и система / Every file name carries the version (`X`) and the system:
 
-Сейчас сборки предназначены в первую очередь для тестирования.
-Builds are currently intended mainly for testing.
+| Платформа / Platform | Файл / File |
+|---|---|
+| Windows (x64 + ARM64, один установщик / one installer) | `EasyBeat-School-X-win.exe` |
+| macOS (Intel + Apple Silicon) | `EasyBeat-School-X-mac-universal.pkg` (или / or `.zip`) |
+| Linux x86_64 | `EasyBeat.School-X-linux-x86_64.AppImage`, `.flatpak`, `.tar.gz` |
+| Linux ARM64 | `EasyBeat.School-X-linux-arm64.AppImage`, `.flatpak`, `.tar.gz` |
+| Android | `EasyBeat-School-X-android.apk` |
+
+Программа на Windows, macOS и Linux (AppImage) и APK на Android обновляются сами: когда выходит новая версия, появляется кнопка «Обновить». Flatpak и tar.gz показывают кнопку «Скачать» — новую версию нужно поставить так же, как первую.
+The Windows, macOS and Linux (AppImage) programs and the Android APK update themselves: when a new version is out, an "Update" button appears. Flatpak and tar.gz show a "Download" button — install the new version the same way as the first.
 
 ## Установка на Linux / Install on Linux
 
-**Flatpak:**
-```bash
-flatpak install --user EasyBeat.School-0.8.1-x86_64.flatpak
-flatpak run school.easybeat.App
-```
+Вместо `X` — номер версии из имени скачанного файла; для ARM64 — `arm64` вместо `x86_64`.
+Replace `X` with the version from the file you downloaded; on ARM64 use `arm64` instead of `x86_64`.
 
 **AppImage:**
 ```bash
-chmod +x EasyBeat.School-0.8.1-x86_64.AppImage
-./EasyBeat.School-0.8.1-x86_64.AppImage
+chmod +x EasyBeat.School-X-linux-x86_64.AppImage
+./EasyBeat.School-X-linux-x86_64.AppImage
 ```
 
-Контрольные суммы — в `SHA256SUMS.txt`. Файлы упаковки Flatpak — в папке [flatpak](flatpak).
-Checksums are in `SHA256SUMS.txt`. Flatpak packaging files are in [flatpak](flatpak).
+**Flatpak:**
+```bash
+flatpak install --user EasyBeat.School-X-linux-x86_64.flatpak
+flatpak run school.easybeat.App
+```
+
+**tar.gz** (готовая программа, не исходники / the built program, not sources):
+```bash
+tar -xzf EasyBeat.School-X-linux-x86_64.tar.gz
+cd linux-unpacked          # ARM64: linux-arm64-unpacked
+./easybeat-school
+```
+
+Контрольная сумма SHA-256 каждого файла показана на странице выпуска рядом с файлом. Файлы упаковки Flatpak — в папке [flatpak](flatpak).
+The SHA-256 of every file is shown next to it on the release page. Flatpak packaging files are in [flatpak](flatpak).
 
 Вход через Google открывается в браузере по умолчанию и возвращает в программу сам. Во Flatpak это работает из коробки; в AppImage — только если система знает ссылку `easybeat-school://`.
 
